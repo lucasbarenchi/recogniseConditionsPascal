@@ -1,6 +1,13 @@
 import re
 import sys
 
+def func(texto):
+
+
+    return
+
+
+
 
 if __name__ == '__main__':
 
