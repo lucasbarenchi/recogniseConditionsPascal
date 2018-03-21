@@ -12,11 +12,11 @@ def func(texto):
 if __name__ == '__main__':
 
     # Leo parametros
-    archivo_entrada = sys.argv[1]
-    archivo_salida = sys.argv[2]
+    archivo_entrada = sys.argv[1] # primer argumento pasado al ejecutar el programa
+    archivo_salida = sys.argv[2] # segundo argumento pasado al ejecutar el programa
 
     # Entrada
-    f = open(archivo_entrada, 'r')
+    f = open(archivo_entrada, 'r') # r indica solo lectura, w escritura, a append
     datos = f.read()
     f.close()
 
