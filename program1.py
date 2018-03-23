@@ -2,12 +2,10 @@ import re
 import sys
 
 def func(texto):
-
-
-    return
-
-
-
+    ifs = re.search('(if )(.*)( then)',datos)
+    fors = re.search('(for )(.*)( do)', datos)
+    whiles = re.search('(while )(.*)( do)', datos)
+    return ifs.group(2)
 
 if __name__ == '__main__':
 
