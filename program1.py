@@ -9,7 +9,7 @@ def func(texto):
     res = ''
 
     # Busco las tiras de mi interes
-    cond = re.findall(' *(if )(.*) then *| *(for )(.*) do *| *(while )(.*) do *', texto)
+    cond = re.findall('[^{] *\\n *(if )(.*) then *|[^{] *\\n *(for )(.*) do *|[^{] *\\n *(while )(.*) do *', texto)
 
     # Compruebo haber encontrado al menos una tira
     if (cond):
