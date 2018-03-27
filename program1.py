@@ -8,11 +8,22 @@ def func(texto):
     reswhile = 'while: \n'
     res = ''
 
-    cond = re.findall('(if )(.*) then | (for )(.*) do | (while )(.*) do', texto)
+    cond = re.findall(' *(if )(.*) then *| *(for )(.*) do *| *(while )(.*) do *', texto)
 
     if (cond):
         for item in cond:
-            
+            if (item[0] == 'if '):
+                resif = resif + item[1] + '\n'
+            if (item[2] == 'for '):
+                resfor = resfor + item[3] + '\n'
+            if (item[4] == 'while '):
+                reswhile = reswhile + item[5] + '\n'
+        if (not (resif == 'if: \n')):
+            res = res + resif
+        if (not (resfor == 'for: \n')):
+            res = res + resfor
+        if (not (reswhile == 'while \n')):
+            res = res + reswhile
     return res
 
 if __name__ == '__main__':
