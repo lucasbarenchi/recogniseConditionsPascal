@@ -2,11 +2,17 @@ import re
 import sys
 
 def func(texto):
-    ifs = re.search('(if )(.*)( then)',texto)
-    fors = re.search('(for )(.*)( do)', texto)
-    whiles = re.search('(while )(.*)( do)', texto)
-    if (ifs.group(2) != None):
-        res = ifs.group(2)
+    # Variables para retornar
+    resif = 'if: \n'
+    resfor = 'for: \n'
+    reswhile = 'while: \n'
+    res = ''
+
+    cond = re.findall('(if )(.*) then | (for )(.*) do | (while )(.*) do', texto)
+
+    if (cond):
+        for item in cond:
+            
     return res
 
 if __name__ == '__main__':

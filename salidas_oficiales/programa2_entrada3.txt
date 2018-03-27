@@ -1,0 +1,4 @@
+if 2
+for 2
+while 1
+repeat 0

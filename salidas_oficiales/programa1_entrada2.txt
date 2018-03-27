@@ -1,0 +1,5 @@
+for:
+i := 2 to size-1
+while:
+((j > 1) and (numbers[j-1] > index))
+((j > 1) and (numbers[j-1] > index))

@@ -1,0 +1,21 @@
+count   	
+time    	
+index   	
+i       	
+j       	
+k       	
+for i 
+time 
+i 
+k 
+index 
+j 
+numbers[j] 
+j 
+k 
+index 
+numbers[j] 
+j 
+count 
+numbers[j] 
+j 

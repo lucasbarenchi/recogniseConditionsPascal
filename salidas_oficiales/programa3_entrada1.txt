@@ -1,0 +1,7 @@
+numBin 
+pot10 
+numDecAux 
+numBin 
+numDecAux 
+pot10 
+dec2bin 

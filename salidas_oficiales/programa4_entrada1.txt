@@ -1,0 +1,17 @@
+
+
+function decimalAbinario(numDec : Integer) : Integer;
+var pot10, numDecAux, numBin : Integer;
+begin
+  numBin := 0;
+  pot10 := 1;
+  numDecAux := numDec;
+  while (numDecAux <> 0) do
+  begin
+    numBin := numBin + numDecAux mod 2 * pot10;
+    numDecAux := numDecAux div 2;
+    pot10 := pot10 * 10;
+  end;
+  dec2bin := numBin;
+  
+end;

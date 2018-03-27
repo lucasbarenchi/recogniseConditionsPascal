@@ -1,0 +1,3 @@
+(pot10,4)
+(numDecAux,5)
+(numBin,4)

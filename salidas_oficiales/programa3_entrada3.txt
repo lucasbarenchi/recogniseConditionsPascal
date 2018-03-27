@@ -1,0 +1,9 @@
+for i
+arrTope.valores[i] 
+i 
+i 
+valor 
+valor 
+for i 
+arrTope.valores[i] 
+arrTope.tope 

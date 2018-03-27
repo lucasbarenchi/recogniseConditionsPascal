@@ -1,0 +1,8 @@
+if:
+N < arrTope.tope
+i <= arrTope.tope
+for:
+i:= 1 to N
+i := arrTope.tope + 1 to N
+while:
+(i <= arrTope.tope) and (arrTope.valores[i] >= 0)
