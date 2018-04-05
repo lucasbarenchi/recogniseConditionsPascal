@@ -9,17 +9,17 @@ def func(texto):
     res = ''
 
     # Busco las tiras de mi interes
-    cond = re.findall('[^{] *\\n *(if )(.*) then *|[^{] *\\n *(for )(.*) do *|[^{] *\\n *(while )(.*) do *', texto)
+    cond = re.findall(r'\s+(if)\s+(.*)\s+then\s|\s+(for)\s+(.*)\s+do\s|\s+(while)\s+(.*)\s+do\s', texto)
 
     # Compruebo haber encontrado al menos una tira
     if (cond):
         # Detecto si es un if, for o while
         for item in cond:
-            if (item[0] == 'if '):
+            if (item[0] == 'if'):
                 resif = resif + item[1] + '\n'
-            if (item[2] == 'for '):
+            if (item[2] == 'for'):
                 resfor = resfor + item[3] + '\n'
-            if (item[4] == 'while '):
+            if (item[4] == 'while'):
                 reswhile = reswhile + item[5] + '\n'
         # Chequeo que haya encontrado al menos uno de cada uno
         if (not (resif == 'if: \n')):
