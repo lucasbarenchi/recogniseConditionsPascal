@@ -1,5 +1,6 @@
 import re
 import sys
+#import program4
 
 def func(texto):
     # Variables para retornar

@@ -23,7 +23,6 @@ begin
       valor := arrTope.valores[i]
     else
       valor := 0;
-
     (* completo arreglo hasta N con valor *)
     for i := arrTope.tope + 1 to N do
       arrTope.valores[i] := valor;
