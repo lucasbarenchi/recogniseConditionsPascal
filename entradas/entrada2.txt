@@ -16,7 +16,7 @@ begin
     	    k := j + 2 ;
     	    write('counters..');
 	end;
-
+      	 
 	index := numbers[i];
 	j := i;
 	while ((j > 1) and (numbers[j-1] > index)) do begin

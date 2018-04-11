@@ -1,6 +1,6 @@
 (* Basado en la solucion del examen de febrero de 2018 de programcion 1 *)
 
-function decimalAbinario(numDec : Integer) : Integer;
+function decimalAbinario (numDec : Integer) : Integer;
 var pot10, numDecAux, numBin : Integer;
 begin
   numBin := 0;

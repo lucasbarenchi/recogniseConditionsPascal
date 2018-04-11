@@ -21,15 +21,13 @@ def func(texto):
            res2 = res2 + item[0]
 
     # Busco comentarios con (* *)
-    #cond3 = re.findall(r'([^(]*)(\(\*)([^*]*)(\*\))(.*)', res2)
+    cond3 = re.findall(r'([^(]*[^*]*)(\(\*){1}[^*]*(\*\)){1}([^(]*)', res2)
     # Encontre y devuelvo
-    # print(cond3[1][0])
-    # if (cond3):
-    #     for item in cond3:
-    #         res3 = res3 + item[0] + item[4]
+    if (cond3):
+        for item in cond3:
+            res3 = res3 + item[0] + item[3]
 
-
-    return res2
+    return res3
 if __name__ == '__main__':
 
     # Leo parametros

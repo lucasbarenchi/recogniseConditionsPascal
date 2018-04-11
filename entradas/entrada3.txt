@@ -4,7 +4,7 @@ procedure normalizarArreglo (var arrTope : ArregloTope; N: Integer);
 var
   i	:  Integer  ;	valor	:  Real  ;
 begin
-  (* si hay mas de N elementos en el arreglo,
+  (* si hay mas de N elementos en el arreglo, 
      elimino los primeros hasta dejar el tope en N, manteniendo el orden *)
   if N < arrTope.tope then
     for i:= 1 to N do
@@ -20,9 +20,10 @@ begin
     while (i <= arrTope.tope) and (arrTope.valores[i] >= 0) do
       (* inc i *) i := i + 1;
     if i <= arrTope.tope then
-      valor := arrTope.valores[i]
+      valor := arrTope.valores[i] 
     else
       valor := 0;
+      
     (* completo arreglo hasta N con valor *)
     for i := arrTope.tope + 1 to N do
       arrTope.valores[i] := valor;

@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
 			else:
 			    # COMPARAR LAS SALIDAS
-				diferencias = "diff " + archSalida + " " + archSalidaOficial 
+				diferencias = "diff --strip-trailing-cr " + archSalida + " " + archSalidaOficial 
 				print(diferencias)
 				x = os.system(diferencias)		
 				if x != 0:

@@ -1,0 +1,42 @@
+Procedure counters(numbers : array of Integer; size : Integer);
+var
+	count, time, index, i, j, k : Integer;
+begin
+
+	count   	:= 0 ;
+	time    	:= 0 ;
+	index   	:= 0 ;
+	i       	:= 0 ;
+	j       	:= 0 ;
+	k       	:= 0 ;
+
+	for i := 2 to size-1 do begin
+    	    time := time + 1 ;
+    	    i := j + 2 ;
+    	    k := j + 2 ;
+    	    write('counters..');
+	end;
+      	 
+	index := numbers[i];
+	j := i;
+	while ((j > 1) and (numbers[j-1] > index)) do begin
+    	    numbers[j] := numbers[j-1];
+    	    j := j - 1;
+    	    k := k - 1;
+    	    write('counters..');
+	end;
+
+	while ((j > 1) and (numbers[j-1] > index)) do begin
+    	    index := index +1;
+    	    numbers[j] := numbers[j-1];
+    	    j := j - 1;
+    	    write('counters..');
+	end;
+
+	repeat
+    	    count := count + 1 ;
+    	    numbers[j] := numbers[j-1];
+    	    j := j - 1;
+    	    write('counters..');
+	until ((j > 1) and (numbers[j-1] > index));
+end;

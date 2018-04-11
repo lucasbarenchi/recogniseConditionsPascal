@@ -1,3 +1,0 @@
-If: 
-(hola = 1)
-hola
