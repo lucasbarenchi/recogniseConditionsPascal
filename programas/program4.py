@@ -15,19 +15,10 @@ def func(texto):
             comment1 = comment1 + item[0] + item[1]
         res = comment1
     # Busco comentarios con //
-    cond2 = re.findall(r'([^/]*)(//){,1}[^\n]*', comment1)
-    # Encontre y devuelvo
-    if (cond2):
-        for item in cond2:
-           comment2 = comment2 + item[0]
-        res = comment2
+    res = re.sub(r'(//[^\n]*)', '', res)
+
     # Busco comentarios con (* *)
-    cond3 = re.findall(r'([^(]*[^*]*)(\(\*){1}[^*]*(\*\)){1}([^(]*)', comment2)
-    # Encontre y devuelvo
-    if (cond3):
-        for item in cond3:
-            comment3 = comment3 + item[0] + item[3]
-        res = comment3
+    res = re.sub(r'(\(\*).*?(\*\))', '', res, re.MULTILINE, re.DOTALL)
 
     return res
 if __name__ == '__main__':
