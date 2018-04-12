@@ -1,8 +1,10 @@
 import re
 import sys
-#import program4
+import program4
 
 def func(texto):
+    # Elimino los comentarios
+    textoSinComentarios = program4.func(texto)
     # Variables para retornar
     resif = 'if: \n'
     resfor = 'for: \n'
@@ -10,7 +12,7 @@ def func(texto):
     res = ''
 
     # Busco las tiras de mi interes
-    cond = re.findall(r'\s+(if)\s+(.*)\s+then\s|\s+(for)\s+(.*)\s+do\s|\s+(while)\s+(.*)\s+do\s', texto)
+    cond = re.findall(r'\s+(if)\s+(.*)\s+then\s|\s+(for)\s+(.*)\s+do\s|\s+(while)\s+(.*)\s+do\s', textoSinComentarios)
 
     # Compruebo haber encontrado al menos una tira
     if (cond):
