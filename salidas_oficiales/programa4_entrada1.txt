@@ -1,6 +1,6 @@
 
 
-function decimalAbinario(numDec : Integer) : Integer;
+function decimalAbinario (numDec : Integer) : Integer;
 var pot10, numDecAux, numBin : Integer;
 begin
   numBin := 0;
@@ -13,5 +13,5 @@ begin
     pot10 := pot10 * 10;
   end;
   dec2bin := numBin;
-  
+
 end;

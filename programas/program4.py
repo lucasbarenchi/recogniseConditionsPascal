@@ -4,30 +4,32 @@ import sys
 def func(texto):
     # Variable para retornar
     res = ''
-    res2 = ''
-    res3 = ''
+    comment1 = ''
+    comment2 = ''
+    comment3 = ''
     # Busco comentarios con { }
     cond1 = re.findall(r'([^{]*){{,1}[^}]*}{,1}([^{]*)', texto)
     # Encontre y devuelvo
     if (cond1):
         for item in cond1:
-            res = res + item[0] + item[1]
-
+            comment1 = comment1 + item[0] + item[1]
+        res = comment1
     # Busco comentarios con //
-    cond2 = re.findall(r'([^/]*)(//){,1}[^\n]*', res)
+    cond2 = re.findall(r'([^/]*)(//){,1}[^\n]*', comment1)
     # Encontre y devuelvo
     if (cond2):
-       for item in cond2:
-           res2 = res2 + item[0]
-
+        for item in cond2:
+           comment2 = comment2 + item[0]
+        res = comment2
     # Busco comentarios con (* *)
-    cond3 = re.findall(r'([^(]*[^*]*)(\(\*){1}[^*]*(\*\)){1}([^(]*)', res2)
+    cond3 = re.findall(r'([^(]*[^*]*)(\(\*){1}[^*]*(\*\)){1}([^(]*)', comment2)
     # Encontre y devuelvo
     if (cond3):
         for item in cond3:
-            res3 = res3 + item[0] + item[3]
+            comment3 = comment3 + item[0] + item[3]
+        res = comment3
 
-    return res3
+    return res
 if __name__ == '__main__':
 
     # Leo parametros
